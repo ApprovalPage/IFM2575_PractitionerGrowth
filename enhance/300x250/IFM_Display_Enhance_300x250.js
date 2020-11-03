@@ -3,7 +3,7 @@
 var p; // shortcut to reference prototypes
 var lib={};var ss={};var img={};
 lib.ssMetadata = [
-		{name:"IFM_Display_Enhance_300x250_atlas_NP_1", frames: [[0,0,1000,914]]}
+		{name:"IFM_Display_Enhance_300x250_atlas_1", frames: [[0,0,1200,2400]]}
 ];
 
 
@@ -26,8 +26,8 @@ lib.ssMetadata = [
 
 
 
-(lib.patternleafBLUE301000 = function() {
-	this.initialize(ss["IFM_Display_Enhance_300x250_atlas_NP_1"]);
+(lib._300x600_Leaf = function() {
+	this.initialize(ss["IFM_Display_Enhance_300x250_atlas_1"]);
 	this.gotoAndStop(0);
 }).prototype = p = new cjs.Sprite();
 // helper functions:
@@ -47,6 +47,28 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 	prototype.frameBounds = frameBounds;
 	return prototype;
 	}
+
+
+(lib.patternleaf = function(mode,startPosition,loop,reversed) {
+if (loop == null) { loop = true; }
+if (reversed == null) { reversed = false; }
+	var props = new Object();
+	props.mode = mode;
+	props.startPosition = startPosition;
+	props.labels = {};
+	props.loop = loop;
+	props.reversed = reversed;
+	cjs.MovieClip.apply(this,[props]);
+
+	// Layer_2
+	this.instance = new lib._300x600_Leaf();
+	this.instance.setTransform(-600,-1200);
+
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
+
+	this._renderFirstFrame();
+
+}).prototype = getMCSymbolPrototype(lib.patternleaf, new cjs.Rectangle(-600,-1200,1200,2400), null);
 
 
 (lib.IFMlogoreversedRTRGBai = function(mode,startPosition,loop,reversed) {
@@ -796,10 +818,10 @@ if (reversed == null) { reversed = false; }
 	this.timeline.addTween(cjs.Tween.get(this.instance_4).wait(95).to({_off:false},0).to({alpha:1},10).to({_off:true},38).wait(49));
 
 	// pattern
-	this.instance_5 = new lib.patternleafBLUE301000();
-	this.instance_5.setTransform(-308,-301);
+	this.instance_5 = new lib.patternleaf();
+	this.instance_5.setTransform(150,125.05,0.25,0.25,0,0,0,0.2,0.2);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_5).wait(192));
+	this.timeline.addTween(cjs.Tween.get(this.instance_5).to({regX:0.1,regY:0.1,scaleX:1,scaleY:1,x:65.1,y:-68.9},191,cjs.Ease.quadInOut).wait(1));
 
 	// bkgd
 	this.instance_6 = new lib.BKGD();
@@ -810,7 +832,7 @@ if (reversed == null) { reversed = false; }
 	this._renderFirstFrame();
 
 }).prototype = p = new lib.AnMovieClip();
-p.nominalBounds = new cjs.Rectangle(-158,-176,850,789);
+p.nominalBounds = new cjs.Rectangle(-385,-1144,1050,2275);
 // library properties:
 lib.properties = {
 	id: '0957C5EC3B874C629166840920B09671',
@@ -820,7 +842,7 @@ lib.properties = {
 	color: "#333333",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/IFM_Display_Enhance_300x250_atlas_NP_1.jpg?1603736336692", id:"IFM_Display_Enhance_300x250_atlas_NP_1"}
+		{src:"images/IFM_Display_Enhance_300x250_atlas_1.jpg", id:"IFM_Display_Enhance_300x250_atlas_1"}
 	],
 	preloads: []
 };
