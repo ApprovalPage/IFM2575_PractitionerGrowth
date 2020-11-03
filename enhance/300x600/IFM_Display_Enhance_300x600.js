@@ -795,23 +795,23 @@ if (reversed == null) { reversed = false; }
 
 	// HEAD1a
 	this.instance_2 = new lib.HEAD1a();
-	this.instance_2.setTransform(150,152.75);
+	this.instance_2.setTransform(149.95,203.65,1.35,1.35);
 	this.instance_2.alpha = 0;
 	this.instance_2._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_2).wait(4).to({_off:false},0).to({alpha:1},10).wait(178));
+	this.timeline.addTween(cjs.Tween.get(this.instance_2).wait(4).to({_off:false},0).to({alpha:1},10).to({_off:true},81).wait(97));
 
 	// HEAD1b
 	this.instance_3 = new lib.HEAD1b();
-	this.instance_3.setTransform(150,152.75);
+	this.instance_3.setTransform(149.95,203.65,1.35,1.35);
 	this.instance_3.alpha = 0;
 	this.instance_3._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_3).wait(37).to({_off:false},0).to({alpha:1},10).wait(145));
+	this.timeline.addTween(cjs.Tween.get(this.instance_3).wait(37).to({_off:false},0).to({alpha:1},10).to({_off:true},48).wait(97));
 
 	// HEAD2
 	this.instance_4 = new lib.HEAD2();
-	this.instance_4.setTransform(150,261.75);
+	this.instance_4.setTransform(149.95,202.8,1.35,1.35);
 	this.instance_4.alpha = 0;
 	this.instance_4._off = true;
 
@@ -842,7 +842,7 @@ lib.properties = {
 	color: "#333333",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/IFM_Display_Enhance_300x600_atlas_1.jpg?1604440670548", id:"IFM_Display_Enhance_300x600_atlas_1"}
+		{src:"images/IFM_Display_Enhance_300x600_atlas_1.jpg?1604443360160", id:"IFM_Display_Enhance_300x600_atlas_1"}
 	],
 	preloads: []
 };
